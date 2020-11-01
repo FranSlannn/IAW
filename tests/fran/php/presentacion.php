@@ -27,6 +27,13 @@
             font-family: Arial;
             text-transform: uppercase;
             }
+        img {
+            border: 1px solid #ddd;
+            float: right;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            }  
 
 </style>
 
@@ -39,31 +46,35 @@
   $Nombre = "Francisco ";
   $Apellidos = "Ortega Gonzalez";
   $Edad = 36;
-  $Foto = 
+  $Foto = "<img src=https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2012/03/01/120301142216_lolcat_lolcat_promos_304x304_bbc_nocredit.jpg";
   $Curso1 = "Bachiller";
-  $Curso2 = "Administracion de sistemas informaticos y redes";
+  $Curso2 = "Administracion de sistemas informaticos y redes";  
   
   echo "<h1> Presentacion Personal </h1> <br>";
 
   echo " <b>Nombre:</b> $Nombre <br>";
   echo " <b>Apellidos:</b> $Apellidos <br>";
   echo " <b>Edad:</b> $Edad <br>";
-  echo " <b>Foto:</b> <br>";
+  echo " $Foto <br>";
 
   echo "<h2>Estudios</h2><br>";
   echo  "- $Curso1 <br>";
   echo  "- $Curso2 <br>";
-
-  
-
+  ?>
 
 
- 
-  
+  <h2>Contacto</h2>
 
-  
+  <br><br>
+<form action="send.php" method="post"" name="contacto" id ="contacto" >
+    <br>
+    <textarea cols="50" rows="5" name="opinion"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="Enviar formulario">
+    <input type="Reset" value="Borrar datos">
 
+</form>
 
-?>
 
 </body>
