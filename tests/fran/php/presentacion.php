@@ -32,9 +32,13 @@
   $Curso2 = "Administracion de sistemas inforticos y redes";
   
   echo "<h1> Presentacion Personal </h1> <br>";
-  <div id="container">
-  echo "<h2> $Nombre  $Apellidos </h2>";
-  </div>
+
+  echo " Nombre: $Nombre <br>";
+  echo " Apellidos: $Apellidos <br>";
+  echo " Edad: $Edad <br>";
+  echo " Foto:  <br>";
+
+  
 
 
 
