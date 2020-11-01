@@ -2,7 +2,6 @@
 <html lang="sp">
 	
 <?php 
-include 'include/header.inc';
  ?>
    <style type="text/css">
       body{
@@ -28,8 +27,20 @@ include 'include/header.inc';
   $Nombre = "Francisco ";
   $Apellidos = "Ortega Gonzalez";
   $Edad = 36;
-  $Curso1 = Bachiller
+  $Foto = 
+  $Curso1 = "Bachiller";
+  $Curso2 = "Administracion de sistemas inforticos y redes";
   
+  echo "<h1> Presentacion Personal </h1> <br>";
+  <div id="container">
+  echo "<h2> $Nombre  $Apellidos </h2>";
+  </div>
+
+
+
+ 
+  
+
   
 
 
