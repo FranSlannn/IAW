@@ -1,0 +1,77 @@
+
+
+{
+    "titulo": "Juego de tronos",
+    "Creado_por": "David Benioff, D. B. Weiss",
+    "País_de_origen": "Estados Unidos",
+    "Género": "Fantasía medieval,Drama,Acción,Aventura,Terror",
+    "N_de_temporadas": "8",
+    "temporadas": [
+       {
+          "@number": "1",
+          "episodios": {
+             "N_episodios": {
+                "@number": "10"
+             }
+          }
+       },
+       {
+          "@number": "2",
+          "episodios": {
+             "N_episodios": {
+                "@number": "10"
+             }
+          }
+       },
+       {
+          "@number": "3",
+          "episodios": {
+             "N_episodios": {
+                "@number": "10"
+             }
+          }
+       },
+       {
+          "@number": "4",
+          "episodios": {
+             "N_episodios": {
+                "@number": "10"
+             }
+          }
+       },
+       {
+          "@number": "5",
+          "episodios": {
+             "N_episodios": {
+                "@number": "10"
+             }
+          }
+       },
+       {
+          "@number": "6",
+          "episodios": {
+             "N_episodios": {
+                "@number": "10"
+             }
+          }
+       },
+       {
+          "@number": "7",
+          "episodios": {
+             "N_episodios": {
+                "@number": "7"
+             }
+          }
+       },
+       {
+          "@number": "8",
+          "episodios": {
+             "N_episodios": {
+                "@number": "6"
+             }
+          }
+       }
+    ]
+ }
+ 
+ 
