@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<serie>
+  <titulo>Juego de tronos</titulo>
+  <Creado_por>David Benioff, D. B. Weiss</Creado_por>   
+  <País_de_origen>Estados Unidos</País_de_origen>
+  <Género>Fantasía medieval,Drama,Acción,Aventura,Terror</Género>
+  <N_de_temporadas>8</N_de_temporadas>
+        <temporadas>
+                <temporada number="1"> 
+                        <episodios>
+                                <N_episodios number="10"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="2"> 
+                        <episodios>
+                                <N_episodios number="10"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="3"> 
+                        <episodios>
+                                <N_episodios number="10"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="4"> 
+                        <episodios>
+                                <N_episodios number="10"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="5"> 
+                        <episodios>
+                                <N_episodios number="10"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="6"> 
+                        <episodios>
+                                <N_episodios number="10"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="7"> 
+                        <episodios>
+                                <N_episodios number="7"></N_episodios>                                
+                        </episodios>                       
+                </temporada>             
+                <temporadas>
+                <temporada number="8"> 
+                        <episodios>
+                                <N_episodios number="6"></N_episodios>                                
+                        </episodios>                       
+                </temporada> 
+        </temporadas>                    
+</serie>
