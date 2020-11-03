@@ -48,7 +48,7 @@
   $Edad = 36;
   $Foto = "<img src=https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2012/03/01/120301142216_lolcat_lolcat_promos_304x304_bbc_nocredit.jpg";
   $Curso1 = "Bachiller";
-  $Curso2 = "Administracion de sistemas aasssssaaaaainformaticos y redes";  
+  $Curso2 = "Administracion de sistemas informaticos y redes";  
   
   echo "<h1> Presentacion Personal </h1> <br>";
 
