@@ -13,7 +13,9 @@ $profesores=array("Fidel","Florindo","Javier","Marisol","Roberto");
 
 
 echo "<p>El profesor <b>".getRandomArray($profesores). "</b> imparte la asignatura de <b>".getRandomArray($asignaturas)."</b>";
+echo "<p>El profesor <b>".getRandomArray($profesores). "</b> imparte la asignatura de <b>".getRandomArray($asignaturas)."</b>";
 
 
 function getRandomArray($array){
     return $array[rand ( 0 , count ( $array ) - 1 )];
+}
