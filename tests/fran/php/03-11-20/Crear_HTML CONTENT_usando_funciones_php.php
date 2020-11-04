@@ -6,6 +6,9 @@
     </head>
     <body>
         <?php
+        
+        //Funciones. Usando funciones php se deben generar el siguiente contenido
+
             function ejerciciohtml(){
               echo "<html>";
               echo "<head>";
