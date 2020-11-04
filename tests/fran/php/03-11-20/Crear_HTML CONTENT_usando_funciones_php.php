@@ -1,34 +1,25 @@
 
-<?php
-// Funciones. Usando funciones php se deben generar el siguiente contenido
+<html>
+    <head>
+        <title>Este es el titulo</title>
 
-function openHtmlTag(){
-	echo "<html>";
-}
-function closeHtmlTag(){
-	echo "</html>";
-}
-function openTag($tag, $id, $class = ""){
-	echo "<".$tag." id=".$id." class=".$class.">";
-}
-function closeTag($tog){
-	echo "</".$tog.">";
-}
-function sayHello(){
-	echo "Hello";
-}
+    </head>
+    <body>
+        <?php
+            function ejerciciohtml(){
+              echo "<html>";
+              echo "<head>";
+              echo "<title>Este es el título</title>";
+              echo "</head>";
+              echo "<body>";
+              echo "<h1 class='red'>Este es el título</h1>";
+              echo "<p class='red'>Hola este es el contenido</p>";
+              echo "</body>";
+              echo "</html>";
+            }
 
-function sayWhatever($whatever){
-	echo "<b>".$whatever."</b>";
-}
-openHtmlTag();
-openTag("p", "id1");
-sayHello();
-closeTag("p");
-openTag("p", "id2");
-sayWhatever("Estoy usando una función");
-closeTag("p");
-openTag("p", "id3", "redcolor");
-sayWhatever("Estoy usando una función OTRA VEZ");
-closeTag("p");
-closeHtmlTag();
+            ejerciciohtml();
+        ?>
+
+    </body>
+</html>
