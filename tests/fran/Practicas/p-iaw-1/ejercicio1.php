@@ -5,6 +5,6 @@
   </head>
   <body>
     <h1>
-    <?php echo "This message is from server side." ?></h1>
+    <?php echo "Este mensaje es de PHP." ?></h1>
   </body>
 </html>
