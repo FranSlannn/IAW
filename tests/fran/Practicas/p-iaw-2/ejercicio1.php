@@ -13,3 +13,34 @@
     */
 
     ?>
+
+<h2>Formulario fiesta:</h2>
+<form name="formularioDatos" method="post" action="ejercicio1post.php">
+    Nombre de la fiesta:
+      <input type="text" name="nombre" maxlength="50"><br><br>
+    Numero de personas:
+      <input type="number" name="numero_personas"><br><br>    
+    Fiesta privada:
+      <input type="radio" name="privada" value="si">Si</input>
+      <input type="radio" name="privada" value="no">No</input><br><br>
+    Tipo de musica: <br>   
+      <select multiple name="musica">    
+      <option value="POP">POP</option>    
+      <option value="ROCK">ROCK</option>    
+      <option value="JAZZ">JAZZ</option>    
+      <option value="INDIE">INDIE</option>  
+      </select><br><br>  
+    Espacios:
+      <input type="checkbox" name="espacios[]" value="Barras" checked="checked">Barras</input>
+      <input type="checkbox" name="espacios[]" value="Escenarios">Escenarios</input>
+      <input type="checkbox" name="espacios[]" value="Jardin">jardin</input>
+      <input type="checkbox" name="espacios[]" value="Zona_chill">Zona chill</input><br><br>
+    Comentarios:
+      <textarea rows="6" cols="40" name="comentarios"></textarea>
+      <br><br>  
+    <!--Botón de enviar-->
+      <input type="submit" name="submit" value="Enviar"></input>
+      <br><br>  
+</form>
+</body>
+</html>
