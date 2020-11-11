@@ -31,10 +31,10 @@
       <option value="INDIE">INDIE</option>  
       </select><br><br>  
     Espacios:
-      <input type="checkbox" name="espacios[]" value="Barras" checked="checked">Barras</input>
-      <input type="checkbox" name="espacios[]" value="Escenarios">Escenarios</input>
-      <input type="checkbox" name="espacios[]" value="Jardin">jardin</input>
-      <input type="checkbox" name="espacios[]" value="Zona_chill">Zona chill</input><br><br>
+      <input type="checkbox" name="espacios" value="Barras">Barras</input>
+      <input type="checkbox" name="espacios" value="Escenarios">Escenarios</input>
+      <input type="checkbox" name="espacios" value="Jardin">jardin</input>
+      <input type="checkbox" name="espacios" value="Zona_chill">Zona chill</input><br><br>
     Comentarios:
       <textarea rows="6" cols="40" name="comentarios"></textarea>
       <br><br>  
