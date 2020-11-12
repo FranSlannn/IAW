@@ -23,7 +23,7 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
     */
 
 
-    if ( $_POST['submit'] ) {
+    
     
         echo "El nombre de la fiesta es: ".$_POST['nombre']. " </br>";
         echo "La cantidad de personas son: ".$_POST['numero_personas']. " </br>";
