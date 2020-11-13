@@ -7,11 +7,22 @@
 
     */
 
-    function getGratherValue(($comparacion))
-    {
-      echo "$entrada[0] + $entrada[1] = ".$entrada[0]+$entrada[1];
+    function getGratherValue(){   
+        
+      $a = 55;
+      $b = 5;
+                    
+             if ($a > $b){
+               echo "$a es mayor que $b";
+                  } elseif ($a == $b) {
+                           echo "son iguales";  
+                           } else {
+                              echo "$a es menor que $b";
+                                    }
+                    
   }
-
+  
+  getGratherValue()
     ?>
     </body>
     </html>
