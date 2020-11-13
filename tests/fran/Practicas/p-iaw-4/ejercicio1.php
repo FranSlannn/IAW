@@ -1,5 +1,4 @@
-<html>
-<body>
+
 <?php
 
 /*Crea 2 variables $a y $b. Dar valores numéricos a esas variables y
@@ -7,17 +6,18 @@
     */
 
     
-      $a = 17;
+      $a = 55;
       $b = 5;
                     
              if ($a > $b){
-               echo "$a es mas grande que $b";
-            }else {
-                     echo "$b es mas grande que $a";
-            };   
+               echo "$a es mayor que $b";
+                  } elseif ($a == $b) {
+                           echo "son iguales";  
+                           } else {
+                              echo "$a es menor que $b";
+                                    }
+                    
                  
 
  ?>
-</body>
-</html>
 
