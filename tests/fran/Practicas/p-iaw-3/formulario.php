@@ -1,4 +1,4 @@
-<HTML>
+<html> 
 <head>
         <title>Ejercicio</title>
     </head>
@@ -21,7 +21,19 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
  En este archivo es donde se deben hacer todas las comprobaciones y mostrar los resultados.
  var_dump($errores);die();
     */
+    $errores = [];
+    // Control de errores
+    if (isset($_POST['enviar'])){
+        if($_POST['nombre'] == ""){
+            $errores['nombre'] = "El nombre de la fiesta es requerido";
+          }
 
+        if(isset($_POST['espacio']) == ""){
+            $errores['espacio'] = "Los espacios de la fiesta son requeridos";
+        }
+    }
+
+    if (count($errores) == 0 && (isset($_POST['enviar']))){
 
     
     
@@ -31,7 +43,7 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
         echo "El tipo de musica elegido es: ".$_POST['musica']. " </br>";     
         echo "Comentarios: ".$_POST['comentarios']. " </br>";
   
-        if($_POST['espacios']){
+        if(isset($_POST['espacios'])){
           $espacios_elegidos = "";
           foreach ($_POST['espacios'] as $key => $value) {
   
@@ -44,22 +56,22 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
             }else{
               echo "No ha seleccionado ningun espacio </br>";
         }
-       
-        ?>      
+        echo "Comentarios: ".$_POST['comentarios']. " </br>";
+
+
+
+      } else {
+        ?>  
     
-
-       
-    <h2>Formulario fiesta:</h2>    
-<form method="POST" action="formulario.php">
-<?php
-
-if($_POST['nombre'] == ""){
-  $errores['nombre'] = "El nombre es requerido";
-
-  ?>
+<form method="POST" action="formulario.php" enctype='multipart/form-data'>
+<input type='hidden' name='formulario' value='Datos'>
 
     Nombre de la fiesta:
       <input type="text" name="nombre" maxlength="50"><br><br>      
+      <?php if(isset($errores['nombre'])){
+            echo "<span class='red'>".$errores['nombre']."</span>";
+            }?>
+            <br>
     Numero de personas:
       <input type="number" name="numero_personas"><br><br>    
     Fiesta privada:
@@ -72,20 +84,26 @@ if($_POST['nombre'] == ""){
       <option value="JAZZ">JAZZ</option>    
       <option value="INDIE">INDIE</option>  
       </select><br><br>  
+      <?php if(isset($errores['musica'])){
+            echo "<span class='red'>".$errores['tipo']."</span>";
+            }?>
     Espacios:
       <input type="checkbox" name="espacios" value="Barras">Barras</input>
       <input type="checkbox" name="espacios" value="Escenarios">Escenarios</input>
       <input type="checkbox" name="espacios" value="Jardin">jardin</input>
       <input type="checkbox" name="espacios" value="Zona_chill">Zona chill</input><br><br>
+      <?php if(isset($errores['espacios'])){
+            echo "<span class='red'>".$errores['espacio']."</span>";
+            }?>
     Comentarios:
       <textarea rows="6" cols="40" name="comentarios"></textarea>
       <br><br>  
     <!--Botón de enviar-->
       <input type="submit" name="submit" value="Enviar"></input>
       
-</form>
-<?php 
- }
- ?>
-</body>
-</HTML>
+      </form>
+        <?php    
+        }
+        ?>
+    </body>
+</html> 
