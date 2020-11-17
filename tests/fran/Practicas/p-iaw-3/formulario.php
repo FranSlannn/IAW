@@ -98,7 +98,7 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
       <input type="checkbox" name="espacios" value="Jardin">jardin</input>
       <input type="checkbox" name="espacios" value="Zona_chill">Zona chill</input><br><br>
       <?php if(isset($errores['espacios'])){
-            echo "<span class='red'>".$errores['espacio']."</span>";
+            echo "<span class='red'>".$errores['espacios']."</span>";
             }?>
     Comentarios:
       <textarea rows="6" cols="40" name="comentarios"></textarea>
