@@ -31,6 +31,10 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
         if(isset($_POST['espacio']) == ""){
             $errores['espacio'] = "Los espacios de la fiesta son requeridos";
         }
+
+        if(isset($_POST['TIPO']) == ""){
+          $errores['TIPO'] = "No has elegido un tipo de musica";
+      }
     }
 
     if (count($errores) == 0 && (isset($_POST['enviar']))){
@@ -78,7 +82,8 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
       <input type="radio" name="privada" value="si">Si</input>
       <input type="radio" name="privada" value="no">No</input><br><br>
     Tipo de musica: <br>   
-      <select multiple name="musica">    
+      <select multiple name="musica"> 
+      <option value="TIPO">Selecciona el tipo de musica</option>     
       <option value="POP">POP</option>    
       <option value="ROCK">ROCK</option>    
       <option value="JAZZ">JAZZ</option>    
