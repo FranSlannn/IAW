@@ -23,10 +23,11 @@ Mi correo es florindo.lopdel9@educa.jcyl.es.
     $email = "florindo.lopde@educa.jcyl.es";
 
 for ($i=0; $i<10 ;$x++) {
-  str_replace("@","$i@", "$email" );
+  str_replace("@",$i."@","$email" );
+  echo "Mi correo es". $email." <br>";
 }
 
-  echo "Mi correo es $email. <br>";
+  
 
 ?> 
    
