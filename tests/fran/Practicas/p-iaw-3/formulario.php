@@ -23,16 +23,19 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
     */
     $errores = [];
     // Control de errores
+
     if (isset($_POST['enviar'])){
+
+
         if($_POST['nombre'] == ""){
             $errores['nombre'] = "El nombre de la fiesta es requerido";
           }
 
-        if(isset($_POST['espacio']) == ""){
+        if(isset($_POST['espacio']) && $_POST['espacio'] == ""){
             $errores['espacio'] = "Los espacios de la fiesta son requeridos";
         }
 
-        if(isset($_POST['TIPO']) == ""){
+        if(isset($_POST['TIPO']) && $_POST['TIPO'] == ""){
           $errores['TIPO'] = "No has elegido un tipo de musica";
       }
     }
@@ -104,7 +107,7 @@ Recuerda que al validar formulario el action del form debe ser el mismo php dond
       <textarea rows="6" cols="40" name="comentarios"></textarea>
       <br><br>  
     <!--Botón de enviar-->
-      <input type="submit" name="submit" value="Enviar"></input>
+      <input type="submit" name="enviar" value="Enviar"></input>
       
       </form>
         <?php    
