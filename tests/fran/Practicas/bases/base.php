@@ -14,8 +14,8 @@ $password = "text";
 // Crear conecction
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-echo "nos hemos conectado". "<br>";
-$query = "SELECT * FROM City LIMIT 10";  
+
+$query = "SELECT * FROM City LIMIT 10 ";  
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -23,8 +23,8 @@ if (!$conn) {
 if ($resultado = $conn->query($query)) {
     while( $row = $resultado->fetch_array() )
     {
-        echo $row['Name'] . " " . $row['CountryCode'];
-        echo "<br />";
+        echo "<li> " . $row['Name'] . " Pertenece al distrito " . $row['District'] . "</li>";
+        echo "<br/>";
     }
      /* liberar el conjunto de resultados */
      $resultado->close();
