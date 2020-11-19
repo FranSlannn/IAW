@@ -33,7 +33,7 @@ if ($resultado = $conn->query($query)) {
      /* liberar el conjunto de resultados */
      $resultado->close();
     }
-    echo "Connected successfully";
+   
     mysqli_close($conn);
 
   ?> 
