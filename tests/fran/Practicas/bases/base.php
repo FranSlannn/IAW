@@ -4,6 +4,7 @@
     <title>bases de datos en PHP</title>
   </head>
   <body>
+  <ol>
   <?php 
   
 $servername = "127.0.0.1";
@@ -21,10 +22,13 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 if ($resultado = $conn->query($query)) {
+    
     while( $row = $resultado->fetch_array() )
     {
+        
         echo "<li> " . $row['Name'] . " Pertenece al distrito " . $row['District'] . "</li>";
         echo "<br/>";
+        
     }
      /* liberar el conjunto de resultados */
      $resultado->close();
@@ -33,6 +37,7 @@ if ($resultado = $conn->query($query)) {
     mysqli_close($conn);
 
   ?> 
+  </ol>
   </body>
 </html>
 
