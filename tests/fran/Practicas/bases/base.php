@@ -26,7 +26,7 @@ if ($resultado = $conn->query($query)) {
     while( $row = $resultado->fetch_array() )
     {
         
-        echo "<li> La ciudad " . $row['Name'] . "con codigo " . $row['CountryCode'] . " Pertenece al distrito " . $row['District'] . "</li>";
+        echo "<li> La ciudad " . $row['Name'] . " con codigo " . $row['CountryCode'] . " pertenece al distrito " . $row['District'] . "</li>";
         echo "<br/>";
         
     }
