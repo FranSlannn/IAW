@@ -17,5 +17,32 @@ Crear un Script php que use un FORMULARIO.
 Usa un html para la salida del script
 
     */
+    $errores = [];
+    // Control de errores
+    
+    if (isset($_POST['sumar'])){
+
+        if($_POST['input_a'] == ""){
+            $errores['input_a'] = "campo requerido";
+          }
+          
+        if($_POST['input_b'] == ""){
+             $errores['input_b'] = "campo requerido";
+              } 
+        }
+
+        if ($sumar= $_POST['input_a'] + $_POST['input_b']){
+                echo "El valor de la suma de ". $_POST['input_a']. "+" . $_POST['input_b'] . " es igual  a $sumar" .<br>; 
+        }
+        if ($restar= $_POST['input_a'] - $_POST['input_b']){
+                echo "El valor de la resta de ". $_POST['input_a']. "-" . $_POST['input_b'] . " es igual  a $restar" .<br>;  
+        }
+        if ($dividir= $_POST['input_a'] / $_POST['input_b']){
+                echo "El valor de la division de ". $_POST['input_a']. "/" . $_POST['input_b'] . " es igual  a $dividir" .<br>;  
+        }
+            
+             
+              
+              
 
     ?>
