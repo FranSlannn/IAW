@@ -18,35 +18,4 @@ Usa un html para la salida del script
 
     */
 
-    
-    ?> 
-
-
-
-<html>
-	<body>
-    <ol>
-      <?php
-      $provincias = [
-          "Avila",
-          "Burgos",
-          "Leon",
-          "Palencia",
-          "Salamanca",
-          "Segovia",
-          "Soria",
-          "Valladolid",
-          "Zamora"
-      ];
-          
-
-      
-      foreach( $provincias as $provincia) {    
-           
-            echo "<li>".$provincia."</li>";
-            
-        }
-        ?> 
-        </ol>
-    </body>
-  </html>
+    ?>
