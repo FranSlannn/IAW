@@ -20,29 +20,36 @@ Usa un html para la salida del script
     $errores = [];
     // Control de errores
     
-    if (isset($_POST['sumar'])){
+    
+    if($_POST['input_a'] == ""){
+        $errores['input_a'] = "campo requerido";
+      }
+      
+    if($_POST['input_b'] == ""){
+         $errores['input_b'] = "campo requerido";
+          } 
 
-        if($_POST['input_a'] == ""){
-            $errores['input_a'] = "campo requerido";
-          }
-          
-        if($_POST['input_b'] == ""){
-             $errores['input_b'] = "campo requerido";
-              } 
+         if (isset($_POST['sumar'])){
+                 $sumar= $_POST['input_a'] + $_POST['input_b'];
+                 echo "El valor de la suma de ". $_POST['input_a']. "+" . $_POST['input_b'] . " es igual  a $sumar"; 
+         }
+
+         if (isset($_POST['restar'])){
+                $restar= $_POST['input_a'] - $_POST['input_b'];
+                echo "El valor de la resta de ". $_POST['input_a']. "-" . $_POST['input_b'] . " es igual  a $restar"; 
         }
 
-        if ($sumar= $_POST['input_a'] + $_POST['input_b']){
-                echo "El valor de la suma de ". $_POST['input_a']. "+" . $_POST['input_b'] . " es igual  a $sumar" .<br>; 
+        if (isset($_POST['multiplicar'])){
+                $multiplicar= $_POST['input_a'] * $_POST['input_b'];
+                echo "El valor de la multiplicacion de ". $_POST['input_a']. "*" . $_POST['input_b'] . " es igual  a $multiplicar"; 
+        }  
+        
+        if (isset($_POST['dividir'])){
+                $dividir= $_POST['input_a'] / $_POST['input_b'];
+                echo "El valor de la division de ". $_POST['input_a']. "/" . $_POST['input_b'] . " es igual  a $dividir"; 
         }
-        if ($restar= $_POST['input_a'] - $_POST['input_b']){
-                echo "El valor de la resta de ". $_POST['input_a']. "-" . $_POST['input_b'] . " es igual  a $restar" .<br>;  
-        }
-        if ($dividir= $_POST['input_a'] / $_POST['input_b']){
-                echo "El valor de la division de ". $_POST['input_a']. "/" . $_POST['input_b'] . " es igual  a $dividir" .<br>;  
-        }
-            
              
-              
+           
               
 
     ?>
