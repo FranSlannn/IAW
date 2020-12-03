@@ -16,8 +16,7 @@
   <meta charset="utf-8">
   <title>
     Avance de ficha.
-    Variables. Sin formularios.
-    Escriba aquí su nombre
+    
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" title="Color">
@@ -26,16 +25,43 @@
 <body>
   <h1>Avance de ficha</h1>
 
-  <p>Actualice la página para mostrar una nueva tirada.</p>
+  
+  <form method="POST" action="dado-ficha.php" enctype='multipart/form-data'>
+  
+   <input name="numero" type="number" min=1 max=6  required="required"><br>  
+
+
+<input type="submit" value="enviar">
+</form> 
+
+
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
+
+$errores = [];
+// Control de errores
+
+if (isset($_POST['enviar'])){
+
+    if($_POST['enviar'] == ""){
+        $errores['enviar'] = "campo requerido";
+      }
+    }
+
+
+$dado = $_POST['numero'];
+$imagsrc1 = "img/".$dado.".svg";
+$imagsrc2 = "img/c".$dado.".svg";
+
+
+
 
 ?>
 
-  <footer>
-    <p>Escriba aquí su nombre</p>
-  </footer>
+<img src="<?php echo $imagsrc1; ?>">
+<img src="<?php echo $imagsrc2; ?>">
+
+  
 </body>
 </html>
