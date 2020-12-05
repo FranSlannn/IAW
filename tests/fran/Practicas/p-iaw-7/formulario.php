@@ -31,7 +31,7 @@ Usa un html para la salida del script
 
          if (isset($_POST['sumar'])){
                  $sumar= $_POST['input_a'] + $_POST['input_b'];
-                 echo "El valor de la suma des ". $_POST['input_a']. "+" . $_POST['input_b'] . " es igual  a $sumar"; 
+                 echo "El valor de la suma de ". $_POST['input_a']. "+" . $_POST['input_b'] . " es igual  a $sumar"; 
          }
 
          if (isset($_POST['restar'])){
