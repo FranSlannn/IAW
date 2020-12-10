@@ -1,4 +1,13 @@
 <?php
+/**
+ * Escriba un programa que cada vez que se ejecute
+ * muestre un círculo de 50px de radio y de un color elegido al azar.
+ *
+ * @author Escriba aquí su nombre
+ *
+ */
+?>
+<?php
 $color = "rgb(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ")";
 
 print "  <p>Color: $color</p>\n";
