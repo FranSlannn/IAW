@@ -16,7 +16,8 @@
   <meta charset="utf-8">
   <title>
     Avance de ficha.
-    
+    Variables. Sin formularios.
+    Escriba aquí su nombre
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" title="Color">
@@ -25,43 +26,40 @@
 <body>
   <h1>Avance de ficha</h1>
 
-  
-  <form method="POST" action="dado-ficha.php" enctype='multipart/form-data'>
-  
-   <input name="numero" type="number" min=1 max=6  required="required"><br>  
+  <p>Actualice la página para mostrar una nueva tirada.</p>
+  <form action ="dado-ficha.php" method="post">
+    <input type="number" min="1" max="6" name="valor_dado">
+    <input type="submit" name="enviar" value="enviar">
+  </form>
 
+  <?php
 
-<input type="submit" value="enviar">
-</form> 
-
-
-
-<?php
-
-
-$errores = [];
-// Control de errores
-
-if (isset($_POST['enviar'])){
-
-    if($_POST['enviar'] == ""){
-        $errores['enviar'] = "campo requerido";
-      }
+    if(isset($_POST['enviar'])){
+      echo "<p><img src='img/".$_POST['valor_dado'].".svg'><p>";
     }
 
+    $randonValue = $_POST['valor_dado'];
+    //$randonValue = rand(1,6);
 
-$dado = $_POST['numero'];
-$imagsrc1 = "img/".$dado.".svg";
-$imagsrc2 = "img/c".$dado.".svg";
+    $background = [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+    ];
 
+    $background[$randonValue-1] = "red";
 
+    foreach ($background as $key => $bg) {
+      echo "<div style='background-color:".$bg."'>".($key+1)."</div>";
+    }
 
+  ?>
 
-?>
-
-<img src="<?php echo $imagsrc1; ?>">
-<img src="<?php echo $imagsrc2; ?>">
-
-  
+  <footer>
+    <p>Fran</p>
+  </footer>
 </body>
 </html>
