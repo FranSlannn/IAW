@@ -41,7 +41,7 @@ Usa un html para la salida del script
           
 
       for
-      foreach( $provincias as $provincia) {    
+      foreach( $provincias as $provincia) {
            
             echo "<li>".$provincia."</li>";
             
@@ -50,3 +50,4 @@ Usa un html para la salida del script
         </ol>
     </body>
   </html>
+  
