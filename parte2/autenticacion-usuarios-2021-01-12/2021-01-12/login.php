@@ -22,14 +22,17 @@ session_start();
   <?php
 
     if(isset($_SESSION['sesion'])){
-        $_SESSION=="admin"
-        echo "<p><a href ='insertarnoticia.php'>insertar noticia</a></p>";
-        echo "<p><a href ='consultarnoticia.php'>Consultar noticia</a></p>";
-        echo "<p><a href ='eliminarnoticia.php'>Eliminar noticia</a></p>";
-        echo "<p><a href ='logout.php'>Logout</a></p>";
-    }else{
-        echo "<p><a href ='consultarnoticia.php'>Consultar noticia</a></p>";
-        echo "<p><a href ='eliminarnoticia.php'>Eliminar noticia</a></p>";
+        echo "<p><b>Hola ".$_SESSION['sesion']."</b></p>";
+        if($_SESSION['sesion'] == "admin"){
+            echo "<p><a href ='insertarnoticia.php'>insertar noticia</a></p>";
+            echo "<p><a href ='consultarnoticia.php'>Consultar noticia</a></p>";
+            echo "<p><a href ='eliminarnoticia.php'>Eliminar noticia</a></p>";
+            echo "<p><a href ='logout.php'>Logout</a></p>";
+        }else{
+            echo "<p><a href ='consultarnoticia.php'>Consultar noticia</a></p>";
+            echo "<p><a href ='logout.php'>Logout</a></p>";
+        }
+    }else{    
     ?>
         <form action="procesarlogin.php" method="post">
             <p>

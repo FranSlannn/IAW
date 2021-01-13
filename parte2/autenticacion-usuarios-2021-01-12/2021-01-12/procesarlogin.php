@@ -23,7 +23,6 @@ session_start();
     
     $usernameValid = "fran";
     $passwordValid = "123456";
-
     $usernameValid2 = "admin";
     $passwordValid2 = "1234567";       
     
@@ -33,23 +32,20 @@ session_start();
 
         if(isset($_POST['username']) && isset($_POST['password'])){
 
-        if ($_POST['username']) == $usernameValid 
-         && $_POST['password'] == $passwordValid){
+            if($_POST['username'] == $usernameValid 
+            && $_POST['password'] == $passwordValid){
              //login ok
-             else if ($_POST['username']) == $usernameValid2 
-              && $_POST['password'] == $passwordValid2){
+            }else if ($_POST['username'] == $usernameValid2 
+            && $_POST['password'] == $passwordValid2){
                  //login 2 ok
-                 else {
-                     $errores[] = "Usuario y contraseña no coinciden"
-                 }
-                }     
-
-     else {
-         $errores[] = "Usuario y contraseña son obligatorios"             
-       
+                }else{
+                    $errores[] = "Usuario y contraseña no coinciden";
+                }
+    
+            }else{
+                $errores[] = "Usuario y contraseña son obligatorios";
+            }
         }
-        
-    }
     
     
     
