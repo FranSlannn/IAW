@@ -6,7 +6,7 @@
  *
  */
 
-print "<!-- Ejercicio incompleto -->\n";
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ print "<!-- Ejercicio incompleto -->\n";
 <body>
   <h1>Formulario en dos pasos (Formulario 2)</h1>
 
-  <form action="sesiones-2-01-4.php" method="get">
+  <form action="sesiones-2-01-4.php" method="post">
     <p>Escriba sus apellidos:</p>
 
 <?php
@@ -35,6 +35,10 @@ print "\n";
 
 print "    <p><label>Apellidos: <input type=\"text\" name=\"apellidos\" size=\"30\" maxlength=\"30\"></label></p>\n";
 print "\n";
+
+if(isset($_SESSION['errorapellidos'])){
+  echo $_SESSION['errorapellidos'];
+}
 
 ?>
     <p>

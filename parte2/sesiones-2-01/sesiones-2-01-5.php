@@ -6,7 +6,7 @@
  *
  */
 
-print "<!-- Ejercicio incompleto -->\n";
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -27,10 +27,12 @@ print "<!-- Ejercicio incompleto -->\n";
 
 <?php
 
-print "<!-- Ejercicio incompleto -->\n";
-print "\n";
+echo "El nombre introducido es: ";$_POST['nombre'] ;
+echo "Los apellidos introducidos son: ";$_POST['apellidos']; 
 
 ?>
+
+
   <p><a href="sesiones-2-01-1.php">Volver al principio.</a></p>
 
   <footer>
