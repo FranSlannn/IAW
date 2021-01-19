@@ -27,8 +27,8 @@ session_start();
 
 <?php
 
-echo "El nombre introducido es: ";$_POST['nombre'] ;
-echo "Los apellidos introducidos son: ";$_POST['apellidos']; 
+echo "El nombre introducido es: ". $_SESSION['nombre']."<br>";
+echo "Los apellidos introducidos son: ". $_SESSION['apellidos']; 
 
 ?>
 
