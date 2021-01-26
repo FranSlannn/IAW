@@ -47,6 +47,40 @@
         }
       ?>
     </li>
+    <li>
+      <a href="crear_jugador.php">Crear tabla jugador</a>
+      <?php
+        if(isset($_SESSION['crear_tabla_jugador'])){
+          if($_SESSION['crear_tabla_jugador']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
+    <li><a href="insertar_datos_jugador.php">Insertar datos jugador</a>
+      <?php
+        if(isset($_SESSION['insertar_tabla_jugador'])){
+          if($_SESSION['insertar_tabla_jugador']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
+    <li><a href="reseteo.php">resetea la base de datos</a>
+      <?php
+        if(isset($_SESSION['resetear'])){
+          if($_SESSION['resetear']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
   </ol>
 
   <footer>
