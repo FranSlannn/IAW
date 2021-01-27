@@ -156,8 +156,6 @@
     
   </ol>
 
-  <footer>
-    <p>Escriba aquí su nombre</p>
-  </footer>
+  
 </body>
 </html>
