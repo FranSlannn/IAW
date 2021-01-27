@@ -74,8 +74,8 @@
     <li>
       <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
       <?php
-        if(isset($_SESSION['crear_jugador_posicion'])){
-          if($_SESSION['crear_jugador_posicion']){
+        if(isset($_SESSION['crear_tabla_jugador_posicion'])){
+          if($_SESSION['crear_tabla_jugador_posicion']){
             echo "<span class='green'>Hecho exitosamente</span>";
           }else{
             echo "<span class='red'>Hecho con errores</span>";

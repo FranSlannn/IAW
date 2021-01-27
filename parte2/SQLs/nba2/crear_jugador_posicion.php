@@ -12,7 +12,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "CREATE TABLE IF NOT EXISTS `jugador_posicion` (
+$sql = "CREATE TABLE IF NOT EXISTS `jugador-posicion` (
     `jugador_id` int(11) NOT NULL,
     `posicion_id` int(11) NOT NULL,
     PRIMARY KEY (`jugador_id`,`posicion_id`) USING BTREE,
