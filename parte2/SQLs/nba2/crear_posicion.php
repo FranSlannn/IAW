@@ -12,17 +12,18 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "INSERT INTO `jugador-posicion` (`jugador_id`, `posicion_id`) VALUES
-(1, 3),
-(2, 3),
-(4, 3),
-(4, 4);
-  ";
+$sql = "CREATE TABLE IF NOT EXISTS `posicion` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(250) NOT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
 $resultado = $conn->query($sql);
+
 if ($resultado) {
-    $_SESSION['insertar_tabla_jugador'] = true;
+    $_SESSION['crear_tabla_posicion'] = true;
 }else{
-    $_SESSION['insertar_tabla_jugador'] = false;
+    $_SESSION['crear_tabla_posicion'] = false;
 }
 echo "Connected successfully";
 mysqli_close($conn);
