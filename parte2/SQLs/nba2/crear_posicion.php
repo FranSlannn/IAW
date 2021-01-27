@@ -17,7 +17,7 @@ $sql = "CREATE TABLE IF NOT EXISTS `posicion` (
     `name` varchar(250) NOT NULL,
     PRIMARY KEY (`id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
-
+";
 $resultado = $conn->query($sql);
 
 if ($resultado) {

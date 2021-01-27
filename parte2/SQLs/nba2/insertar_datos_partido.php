@@ -15,7 +15,7 @@ if (!$conn) {
 $sql = "INSERT INTO `partido` (`id`, `equipo_v_id`, `equipo_l_id`, `resultado`) VALUES
 (1, 1, 2, '108-95'),
 (2, 3, 1, '105-124');
-
+";
 $resultado = $conn->query($sql);
 if ($resultado) {
     $_SESSION['insertar_tabla_partido'] = true;

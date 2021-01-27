@@ -18,7 +18,7 @@ $sql = "INSERT INTO `posicion` (`id`, `name`) VALUES
 (3, 'Pivot'),
 (4, 'Ala-Pivot'),
 (5, 'Escolta');
-
+";
 $resultado = $conn->query($sql);
 if ($resultado) {
     $_SESSION['insertar_tabla_posicion'] = true;

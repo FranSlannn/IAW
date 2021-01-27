@@ -23,7 +23,7 @@ $sql = "CREATE TABLE IF NOT EXISTS `partido` (
     CONSTRAINT `FK-equiipo-visitante` FOREIGN KEY (`equipo_v_id`) REFERENCES `equipo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT `FK-equipo-local` FOREIGN KEY (`equipo_l_id`) REFERENCES `equipo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
   ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
+";
 $resultado = $conn->query($sql);
 
 if ($resultado) {
