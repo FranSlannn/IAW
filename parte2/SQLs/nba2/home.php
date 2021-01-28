@@ -65,8 +65,9 @@
         }
       ?>
     </li>
+    
 
-    <li><a href="insertar_datos_jugador.php">Insertar datos jugador</a>
+    <li><a href="insertar_datos_jugador.php">Insertar datos jugador por defecto</a>
       <?php
         if(isset($_SESSION['insertar_tabla_jugador'])){
           if($_SESSION['insertar_tabla_jugador']){
@@ -76,6 +77,12 @@
           }
         }
       ?>
+    </li>
+    <li><a href="insertar_datos_jugadores_form.php">Insertar datos jugadores formulario</a>
+
+    </li>
+    <li><a href="listar_jugadores.php">Listar jugadores</a>
+
     </li>
     <li>
       <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
