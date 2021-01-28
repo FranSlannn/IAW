@@ -23,7 +23,7 @@
 <body>
   <h1>OPCIONES DATABASE</h1>
 
-  <ol>
+  <ol><h3>EQUIPO</h3>
     <li>
       <a href="crear_equipo.php">Crear tabla equipo</a>
       <?php
@@ -52,7 +52,7 @@
     </li>
     <li><a href="listar_equipos.php">Listar equipos</a>
 
-    </li>
+    </li><h3>JUGADORES</h3>
     <li>
       <a href="crear_jugador.php">Crear tabla jugador</a>
       <?php
@@ -84,7 +84,7 @@
     </li>
     <li><a href="listar_jugadores.php">Listar jugadores</a>
 
-    </li>
+    </li><h3>JUGADOR-POSICION</h3>
     <li>
       <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
       <?php
@@ -107,7 +107,7 @@
           }
         }
       ?>
-    </li>
+    </li><h3>PARTIDO</h3>
     <li>
       <a href="crear_partido.php">Crear tabla partido</a>
       <?php
@@ -130,7 +130,7 @@
           }
         }
       ?>
-    </li>
+    </li><h3>POSICION</h3>
     <li>
       <a href="crear_posicion.php">Crear tabla posicion</a>
       <?php
@@ -160,6 +160,7 @@
 
     </li>
     <li><a href="listar_posicion.php">Listar posicion</a>
+    <h3>RESETEAR</h3>
 
     <li><a href="reseteo.php">resetea la base de datos</a>
       <?php

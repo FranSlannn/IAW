@@ -28,7 +28,7 @@ $resultado = $conn->query($sql);
 </head>
 <body>
 
-<h1>Equipos</h1>
+<h1>Posicion</h1>
 <?php
 if ($resultado) {
 
