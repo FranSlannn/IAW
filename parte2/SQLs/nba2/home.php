@@ -71,29 +71,7 @@
         }
       ?>
     </li>
-    <li>
-      <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
-      <?php
-        if(isset($_SESSION['crear_tabla_jugador_posicion'])){
-          if($_SESSION['crear_tabla_jugador_posicion']){
-            echo "<span class='green'>Hecho exitosamente</span>";
-          }else{
-            echo "<span class='red'>Hecho con errores</span>";
-          }
-        }
-      ?>
-    </li>
-    <li><a href="insertar_datos_jugador_posicion.php">Insertar datos jugador-posicion</a>
-      <?php
-        if(isset($_SESSION['insertar_tabla_jugador_posicion'])){
-          if($_SESSION['insertar_tabla_jugador_posicion']){
-            echo "<span class='green'>Hecho exitosamente</span>";
-          }else{
-            echo "<span class='red'>Hecho con errores</span>";
-          }
-        }
-      ?>
-    </li>
+    
     <li>
       <a href="crear_partido.php">Crear tabla partido</a>
       <?php
@@ -133,6 +111,29 @@
       <?php
         if(isset($_SESSION['insertar_tabla_posicion'])){
           if($_SESSION['insertar_tabla_posicion']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
+    <li>
+      <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
+      <?php
+        if(isset($_SESSION['crear_tabla_jugador_posicion'])){
+          if($_SESSION['crear_tabla_jugador_posicion']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
+    <li><a href="insertar_datos_jugador_posicion.php">Insertar datos jugador-posicion</a>
+      <?php
+        if(isset($_SESSION['insertar_tabla_jugador_posicion'])){
+          if($_SESSION['insertar_tabla_jugador_posicion']){
             echo "<span class='green'>Hecho exitosamente</span>";
           }else{
             echo "<span class='red'>Hecho con errores</span>";
