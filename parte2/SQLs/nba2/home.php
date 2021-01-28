@@ -77,7 +77,7 @@
           }
         }
       ?>
-      
+
     </li>
     <li><a href="insertar_datos_jugadores_form.php">Insertar datos jugadores formulario</a>
 
@@ -143,7 +143,9 @@
         }
       ?>
     </li>
-    <li><a href="insertar_datos_posicion.php">Insertar datos posicion</a>
+    
+    </li>
+    <li><a href="insertar_datos_posicion.php">Insertar datos posicion por defecto</a>
       <?php
         if(isset($_SESSION['insertar_tabla_posicion'])){
           if($_SESSION['insertar_tabla_posicion']){
@@ -154,6 +156,10 @@
         }
       ?>
     </li>
+    <li><a href="insertar_datos_posicion_form.php">Insertar datos posicion formulario</a>
+
+    </li>
+    <li><a href="listar_posicion.php">Listar posicion</a>
 
     <li><a href="reseteo.php">resetea la base de datos</a>
       <?php
