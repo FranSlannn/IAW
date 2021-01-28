@@ -16,7 +16,7 @@ if (!$conn) {
 if(isset($_POST['nombre']) && $_POST['nombre'] != ''){
     unset($_SESSION['error_insertar_jugadores']);
 
-    $sql = "INSERT INTO `jugadores` (`name`) VALUES ('".$_POST['nombre']."')";
+    $sql = "INSERT INTO `jugador` (`name`) VALUES ('".$_POST['nombre']."')";
 
     $resultado = $conn->query($sql);
     if (!$resultado) {

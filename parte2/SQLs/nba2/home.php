@@ -77,6 +77,7 @@
           }
         }
       ?>
+      
     </li>
     <li><a href="insertar_datos_jugadores_form.php">Insertar datos jugadores formulario</a>
 
