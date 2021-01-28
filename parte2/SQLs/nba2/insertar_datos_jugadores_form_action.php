@@ -13,10 +13,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-if(isset($_POST['nombre']) && $_POST['nombre'] != ''){
+if((isset($_POST['nombre']) && $_POST['nombre'] != '') && 
+($_POST['equipo_id'] && $_POST['equipo_id']!= '')){
     unset($_SESSION['error_insertar_jugadores']);
 
-    $sql = "INSERT INTO `jugador` (`name`) VALUES ('".$_POST['nombre']."')";
+    $sql = "INSERT INTO `jugador` (`name`) VALUES ('".$_POST['nombre']."','".$_POST['equipo_id']."')";
 
     $resultado = $conn->query($sql);
     if (!$resultado) {

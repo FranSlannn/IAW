@@ -12,7 +12,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM jugadores ORDER by 'name asc'";
+$sql = "SELECT * FROM jugador ORDER by 'name asc'";
 $resultado = $conn->query($sql);
 ?>
 
@@ -28,7 +28,7 @@ $resultado = $conn->query($sql);
 </head>
 <body>
 
-<h1>Equipos</h1>
+<h1>JUGADORES</h1>
 <?php
 if ($resultado) {
 

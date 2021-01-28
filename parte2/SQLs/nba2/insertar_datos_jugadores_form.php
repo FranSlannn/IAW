@@ -21,10 +21,12 @@
 </head>
 
 <body>
-    <h1>INSERTAR DATOS EQUIPO</h1>
+    <h1>INSERTAR DATOS JUGADORES</h1>
     <form action="insertar_datos_jugadores_form_action.php" method="post">
         Nombre: 
         <input type="text" name="nombre" >
+        Equipo: 
+        <input type="text" name="equipo_id" >
         <?php
             if(isset($_SESSION['error_insertar_jugadores'])){
                 echo "<p class='aviso'>".$_SESSION['error_insertar_jugadores']."</p>";
