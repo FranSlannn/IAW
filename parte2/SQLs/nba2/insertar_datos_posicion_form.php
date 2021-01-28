@@ -21,13 +21,13 @@
 </head>
 
 <body>
-    <h1>INSERTAR DATOS EQUIPO</h1>
-    <form action="insertar_datos_equipo_form_action.php" method="post">
+    <h1>INSERTAR DATOS POSICION</h1>
+    <form action="insertar_datos_posicion_form_action.php" method="post">
         Nombre: 
         <input type="text" name="nombre" >
         <?php
-            if(isset($_SESSION['error_insertar_equipo'])){
-                echo "<p class='aviso'>".$_SESSION['error_insertar_equipo']."</p>";
+            if(isset($_SESSION['error_insertar_posicion'])){
+                echo "<p class='aviso'>".$_SESSION['error_insertar_posicion']."</p>";
             }
         ?>
         <input type="submit" name="enviar" value="Guardar datos">

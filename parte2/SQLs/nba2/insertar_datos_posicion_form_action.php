@@ -14,9 +14,9 @@ if (!$conn) {
 }
 
 if(isset($_POST['nombre']) && $_POST['nombre'] != ''){
-    unset($_SESSION['error_insertar_equipo']);
+    unset($_SESSION['error_insertar_posicion']);
 
-    $sql = "INSERT INTO `equipo` (`name`) VALUES ('".$_POST['nombre']."')";
+    $sql = "INSERT INTO `posicion` (`name`) VALUES ('".$_POST['nombre']."')";
 
     $resultado = $conn->query($sql);
     if (!$resultado) {
@@ -26,8 +26,8 @@ if(isset($_POST['nombre']) && $_POST['nombre'] != ''){
 
     header("Location:home.php");
 }else{
-    $_SESSION['error_insertar_equipo'] = "El nombre es requerido";
+    $_SESSION['error_insertar_posicion'] = "El nombre es requerido";
     mysqli_close($conn);
 
-    header("Location:insertar_datos_equipo_form.php");
+    header("Location:insertar_datos_posicion_form.php");
 }
