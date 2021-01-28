@@ -36,7 +36,7 @@
         }
       ?>
     </li>
-    <li><a href="insertar_datos_equipo.php">Insertar datos equipo</a>
+    <li><a href="insertar_datos_equipo.php">Insertar datos equipo por defecto</a>
       <?php
         if(isset($_SESSION['insertar_tabla_equipo'])){
           if($_SESSION['insertar_tabla_equipo']){
@@ -46,6 +46,12 @@
           }
         }
       ?>
+    </li>
+    <li><a href="insertar_datos_equipo_form.php">Insertar datos equipo formulario</a>
+
+    </li>
+    <li><a href="listar_equipos.php">Listar equipos</a>
+
     </li>
     <li>
       <a href="crear_jugador.php">Crear tabla jugador</a>
@@ -59,7 +65,7 @@
         }
       ?>
     </li>
-    
+
     <li><a href="insertar_datos_jugador.php">Insertar datos jugador</a>
       <?php
         if(isset($_SESSION['insertar_tabla_jugador'])){
@@ -71,7 +77,29 @@
         }
       ?>
     </li>
-    
+    <li>
+      <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
+      <?php
+        if(isset($_SESSION['crear_tabla_jugador_posicion'])){
+          if($_SESSION['crear_tabla_jugador_posicion']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
+    <li><a href="insertar_datos_jugador_posicion.php">Insertar datos jugador-posicion</a>
+      <?php
+        if(isset($_SESSION['insertar_tabla_jugador_posicion'])){
+          if($_SESSION['insertar_tabla_jugador_posicion']){
+            echo "<span class='green'>Hecho exitosamente</span>";
+          }else{
+            echo "<span class='red'>Hecho con errores</span>";
+          }
+        }
+      ?>
+    </li>
     <li>
       <a href="crear_partido.php">Crear tabla partido</a>
       <?php
@@ -118,30 +146,7 @@
         }
       ?>
     </li>
-    <li>
-      <a href="crear_jugador_posicion.php">Crear tabla jugador-posicion</a>
-      <?php
-        if(isset($_SESSION['crear_tabla_jugador_posicion'])){
-          if($_SESSION['crear_tabla_jugador_posicion']){
-            echo "<span class='green'>Hecho exitosamente</span>";
-          }else{
-            echo "<span class='red'>Hecho con errores</span>";
-          }
-        }
-      ?>
-    </li>
-    <li><a href="insertar_datos_jugador_posicion.php">Insertar datos jugador-posicion</a>
-      <?php
-        if(isset($_SESSION['insertar_tabla_jugador_posicion'])){
-          if($_SESSION['insertar_tabla_jugador_posicion']){
-            echo "<span class='green'>Hecho exitosamente</span>";
-          }else{
-            echo "<span class='red'>Hecho con errores</span>";
-          }
-        }
-      ?>
-    </li>
-    
+
     <li><a href="reseteo.php">resetea la base de datos</a>
       <?php
         if(isset($_SESSION['resetear'])){
@@ -153,10 +158,10 @@
         }
       ?>
     </li>
-    
-    
+
+
   </ol>
 
-  
+
 </body>
 </html>
