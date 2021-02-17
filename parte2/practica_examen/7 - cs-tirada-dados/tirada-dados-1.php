@@ -25,10 +25,25 @@ print "<!-- Ejercicio incompleto -->\n";
   <h1>Tirada de dados</h1>
 <?php
 
+$tirada1= rand(1,6);
+$tirada2= rand(1,6);
+$tirada3= rand(1,6);
+
+$_SESSION["dado1"]=$tirada1;
+$_SESSION["dado2"]=$tirada2;
+$_SESSION["dado3"]=$tirada3;
+
 print "    <p class=\"aviso\">Ejercicio incompleto</p>\n";
 
 ?>
 
+<p>  
+  
+  <img src=<?php echo "img/".$tirada1.".svg"; ?>>
+  <img src=<?php echo "img/".$tirada2.".svg"; ?>>
+  <img src=<?php echo "img/".$tirada3.".svg"; ?>>
+  la suma 
+</p>
 
 <footer>
   <p>Escriba aquí su nombre</p>
