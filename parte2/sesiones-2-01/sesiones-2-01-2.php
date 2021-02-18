@@ -24,6 +24,7 @@ if ($_SESSION['errornombre'] != ""){
     # form y nombre mal,guardo en sesion y voy a la pagina 1
     header("Location:sesiones-2-01-1.php");
     
+    
 }else {
     # form y nombre ok,guardo en sesion y voy a la pagina 3
     $_SESSION['nombre'] = $_POST['nombre'];
