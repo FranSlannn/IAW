@@ -23,9 +23,9 @@ session_start();
     
     $usernameValid = "fran";
     $passwordValid = "123456";
+
     $usernameValid2 = "admin";
-    $passwordValid2 = "1234567";       
-    
+    $passwordValid2 = "1234567";
     $errores = [];
 
     if(isset($_POST['enviar'])){
@@ -33,27 +33,24 @@ session_start();
         if(isset($_POST['username']) && isset($_POST['password'])){
 
             if($_POST['username'] == $usernameValid 
-            && $_POST['password'] == $passwordValid){
-             //login ok
+                && $_POST['password'] == $passwordValid){
+                //LOGIN OK uservalid1
             }else if ($_POST['username'] == $usernameValid2 
-            && $_POST['password'] == $passwordValid2){
-                 //login 2 ok
-                }else{
-                    $errores[] = "Usuario y contraseña no coinciden";
-                }
-    
+                && $_POST['password'] == $passwordValid2){
+                //LOGIN OK uservalid2
             }else{
-                $errores[] = "Usuario y contraseña son obligatorios";
+                $errores[] = "Usuario y contraseña no coinciden";
             }
+            
+        }else{
+            $errores[] = "Usuario y contraseña son obligatorios";
         }
-    
-    
-    
+    }
 
     if(count($errores) == 0){
         // LOGIN OK
-        $_SESSION['sesion'] = "iniciada";
-        header("Location: http://localhost/repositorio/IAW/parte2/autenticacion-usuarios-2021-01-12/2021-01-12/login.php");
+        $_SESSION['sesion'] = $_POST['username'];
+        header("Location: http://localhost/IAW/clases/florindo/2021-01-12/login.php");
         die();
     }else{
         //ERRORES TIENE VALORES, LUEGO EL LOGIN HA FALLADO

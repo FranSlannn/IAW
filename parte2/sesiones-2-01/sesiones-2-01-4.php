@@ -19,10 +19,10 @@ if(isset($_POST['apellidos'])){
   
 
 if ($_SESSION['errorapellidos'] != ""){
-    # form y nombre ok,guardo en sesion y voy a la pagina 3
+    # form y nombre mal,guardo en sesion y voy a la pagina 3
     header("Location:sesiones-2-01-3.php");
 }else {
-    # form y nombre ok,guardo en sesion y voy a la pagina 1
+    # form y nombre ok,guardo en sesion y voy a la pagina 5
     $_SESSION['apellidos'] = $_POST['apellidos'];
     header("Location:sesiones-2-01-5.php");
 }

@@ -8,7 +8,7 @@
  */
 session_start();
 session_destroy();
-header("Location: http://localhost/repositorio/IAW/parte2/autenticacion-usuarios-2021-01-12/2021-01-12/login.php");
+header("Location: http://localhost/IAW/clases/florindo/2021-01-12/login.php");
 die();
 ?>
 <!DOCTYPE html>

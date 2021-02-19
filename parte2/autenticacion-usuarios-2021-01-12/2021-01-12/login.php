@@ -32,7 +32,7 @@ session_start();
             echo "<p><a href ='consultarnoticia.php'>Consultar noticia</a></p>";
             echo "<p><a href ='logout.php'>Logout</a></p>";
         }
-    }else{    
+    }else{
     ?>
         <form action="procesarlogin.php" method="post">
             <p>
