@@ -1,73 +1,58 @@
 <?php
 /**
- * Suma o resta- suma-resta-1.php
+ * Tirada dados - tirada-dados-1.php
  *
- * @author Escriba aquí su nombre
- *
+ * @author Florindo López Delgado
  */
-session_start();
-print "<!-- Ejercicio incompleto -->\n";
-
+ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>
-    Suma o resta. Sesiones.
+    Tirada dados (Formulario).
+    Con sesiones.
     Escriba aquí su nombre
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" title="Color">
-  <style>
-  button { background-color: white; padding: 0; border: none;}
-  </style>
 </head>
 
 <body>
-  <h1>Suma o resta</h1>
-
-  <p>Haga clic en uno de los botones para tirar un dado y añadirlo al total.</p>
-
-  <form action="suma-resta-2.php" method="post">
-    <p>
-      <input type="submit" name="accion" value="Añadir">
-      <input type="submit" name="accion" value="Restar">
-      <input type="hidden" name="dado">
-    </p>
-
+  <h1>Tirada de dados</h1>
 <?php
 
-$dado = rand(1,6);
+ $dados1 = rand(1, 6);
+ $dados2 = rand(1, 6);
+ $dados3 = rand(1, 6);
 
-$_SESSION['dado'] = $dado;
-$añadir = $total + $dado;
-$restar = $total - $dado;
-$total = 0 + $dado;
-
-echo "añadir: " . $añadir . "<br>";
-echo "restar: " . $restar;
-/*
-if (isset($_SESSION['restar'])) {
- if ($_SESSION['restar']) > ($_SESSION['total']) {
-  print ?><p><img src="img/0.svg></p><?php
- }
-}
-*/
-
-
-
+ $_SESSION['dado1'] = $dados1;
+ $_SESSION['dado2'] = $dados2;
+ $_SESSION['dado3'] = $dados3;
 
 ?>
+<p>
+  <img src="<?php echo "img/".$dados1.".svg"; ?>" alt="4" width="140" height="140">
+  <img src="<?php echo "img/".$dados2.".svg"; ?>" alt="1" width="140" height="140">
+  <img src="<?php echo "img/".$dados3.".svg"; ?>" alt="2" width="140" height="140">
+</p>
+<p>Valor Total conseguido: <?php echo $dados1 + $dados2 + $dados3; ?></p>
+<p>
+  <a href="tirada-dados-1.php">Volver a tirar</a>
+<p>
+</p>
+  <a href="tirada-dados-2.php">Resumen de la tirada con sesión</a>
+</p>
+<form action="tirada-dados-2.php" method="post">
+  <input type="hidden" name="dado1" value="<?php echo $dados1; ?>" >
+  <input type="hidden" name="dado2" value="<?php echo $dados2; ?>" >
+  <input type="hidden" name="dado3" value="<?php echo $dados3; ?>" >
+  <input type="submit" name="enviar" value="Resumen de la tirada desde el form"> 
+</form>
 
-<p><img src="img/<?php echo $dado ?>.svg" alt="4" width="140" height="140"></p>
-
-<p>Total: <?php echo $total ?></p>
-
-  </form>
-
-  <footer>
-    <p>Fran</p>
-  </footer>
+<footer>
+  <p>Florindo López Delgado</p>
+</footer>
 </body>
 </html>
